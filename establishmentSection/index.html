@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Establishment Section</title>
+    <style>
+        .sections-wrapper{
+            width: 80%;
+            margin: auto;
+        }
+        .drag-div{
+            background-color: lightgrey;
+            text-align: center;
+            cursor: default;
+        }
+        #drag-div1{
+            background-color: lightgrey;
+            text-align: center;
+            cursor: default;
+        }
+        .testing-area{
+            background-color: rgb(180,180,180);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner1{
+            height: 75%;
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(200,200,200);
+        }
+        .inner2{
+            height: 75%;
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(220,220,220);
+        }
+        .inner3{
+            height: 75%;
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(240,240,240);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sections-wrapper">
+        <establishment-section></establishment-section>
+        <establishment-section></establishment-section>
+    </div>
+    <div class="drag-div" id="drag-div1" draggable="true">This is the most basic draggable element ever</div>
+    <div class="drag-div" id="drag-div2" draggable="true">This is the most basic draggable element ever</div>
+    <div class="drag-div" id="drag-div3" draggable="true">This is the most basic draggable element ever</div>
+
+    <manage-room-row id="s1-r1" draggable="true"></manage-room-row>
+    <manage-room-row id="s1-r2" draggable="true"></manage-room-row>
+    <div class="testing-area">
+        <div class="inner1">
+            <div class="inner2">
+                <div class="inner3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="establishmentSection.js"></script>
+    <script src="ManageRoomRow.js"></script>
+    <script src="sandbox.js"></script>
+</body>
+</html>
