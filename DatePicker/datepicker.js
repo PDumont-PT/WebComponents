@@ -19,6 +19,15 @@ template.innerHTML = `
         width: fit-content;
         margin: auto;
     }
+
+    #title{
+        font-size: 14px;
+        padding: 2px;
+        color: rgb(23, 161, 255);
+        align-self: flex-start;
+        font-weight: bold;
+    }
+
     #calendar-wrapper{
         display: none;
         flex-direction: row;
@@ -170,6 +179,7 @@ template.innerHTML = `
     }
 </style>
 <div id="date-picker-wrapper">
+    <div id="title"></div>
     <div id="test-div">
         <div class="text-section-wrapper">
             <span class="text" contenteditable="true"></span>
@@ -265,6 +275,12 @@ class WCDatePicker extends HTMLElement{
         super();
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+        if(this.getAttribute('title') === null){
+            this.shadowRoot.getElementById('title').innerHTML = 'Date';
+        }else{
+            this.shadowRoot.getElementById('title').innerHTML = this.getAttribute('title');
+        }
+        
     }
 
     connectedCallback(){
